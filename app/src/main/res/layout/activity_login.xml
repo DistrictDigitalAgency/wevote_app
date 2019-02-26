@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".loginActivity"
+    android:background="@color/whiteColor"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:paddingTop="0dp"
+            android:id="@+id/linearshit"
+            android:fitsSystemWindows="true"
+            android:layout_gravity="center"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="220dp"
+                android:id="@+id/mainLogo"
+                app:srcCompat="@drawable/wevote"
+                android:layout_gravity="center"
+
+                />
+
+            <EditText
+                android:paddingTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Numéro de téléphone"
+                android:id="@+id/phoneNumber"
+                android:layout_below="@+id/mainLogo"
+                android:layout_centerHorizontal="true"
+                android:inputType="number"
+
+                />
+            <EditText
+                android:paddingTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mot de passe"
+                android:id="@+id/password"
+                android:inputType="textPassword"
+                android:layout_centerHorizontal="true"
+
+                />
+
+
+
+            <Button
+                android:id="@+id/identifier"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="s'identifier"
+                android:layout_below="@+id/password"
+                android:textColor="@color/whiteColor"
+                android:background="@drawable/typical_button"
+                android:layout_centerHorizontal="true"
+                android:textAllCaps="false"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:onClick="goToVotingActivity"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mot de passe oublié ?"
+                android:textColor="@color/blackColor"
+                android:clickable="true"
+
+                />
+
+        </LinearLayout>
+
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/linearshit">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:paddingBottom="10dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registerAccountP1"
+                    android:textColor="@color/blackColor"
+                    />
+                <TextView
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/registerAccountP2"
+                    android:textColor="@color/blackColor"
+                    android:clickable="true"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:layout_alignParentBottom="true"
+                    android:onClick="goToRegisterActivity"/>
+            </LinearLayout>
+        </android.support.constraint.ConstraintLayout>
+
+    </RelativeLayout>
+</ScrollView>

@@ -1,0 +1,65 @@
+<resources>
+    <string name="app_name">WeVote</string>
+
+    <!-- Main Activity-->
+    <string name="getToKnowTheApp"><u>Get to know the app</u></string>
+
+
+    <!--login page-->
+    <string name="registerAccountP1">vous n\'avez pas de compte?</string>
+    <string name="registerAccountP2"> créer une !</string>
+
+
+    <!--register page-->
+    <string name="loginToAccountP1">vous avez déja une compte?</string>
+    <string name="loginToAccountP2"> se connecter !</string>
+
+
+    <!--Arrays-->
+    <string-array name="sexe_array">
+        <item>Sexe</item>
+        <item>Homme</item>
+        <item>Femme</item>
+        <item>Autre</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+    <string name="title_activity_voting">votingActivity</string>
+    <string name="title_activity_main_voting">mainVotingActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <array name="menuOptions">
+        <item>Home</item>
+        <item>Wallet</item>
+        <item>Settings</item>
+        <item>Help</item>
+        <item>Privacy and security</item>
+        <item>About</item>
+    </array>
+</resources>
