@@ -4,7 +4,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/drawer"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
     <nl.psdcompany.duonavigationdrawer.views.DuoMenuView
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -35,7 +36,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@android:color/white"
-            android:padding="?attr/listPreferredItemPaddingRight"
+            android:layout_margin="0dp"
             />
     </LinearLayout>
 

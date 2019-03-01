@@ -33,6 +33,7 @@ dependencies {
     implementation 'com.github.mzule.fantasyslide:library:1.0.5'
     implementation 'nl.psdcompany:duo-navigation-drawer:2.0.8'
     implementation 'com.github.michaldrabik:tapbarmenu:1.0.5'
+    implementation 'com.lorentzos.swipecards:library:1.0.9@aar'
 
 
 }

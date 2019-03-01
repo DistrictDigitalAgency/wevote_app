@@ -1,31 +1,198 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/black"
-    android:layout_margin="-16dp"
-    android:padding="-16dp"
+    android:background="@android:color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
-    <include
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Header Menu -->
+    <HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:isScrollContainer="true"
+        android:overScrollMode="always"
+        android:scrollbarAlwaysDrawHorizontalTrack="false"
+        android:scrollbars="none"
+        android:id="@+id/header_menu"
+        android:background="@color/whiteColor"
+        android:layout_alignParentTop="true"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@drawable/header_menu_button"
+                android:drawableTop="@drawable/ic_culture"
+                android:text="Culture"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="9sp"/>
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/header_menu_button"
+                android:drawableTop="@drawable/ic_high_tech"
+                android:text="High-tech"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="9sp"/>
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/header_menu_button"
+                android:drawableTop="@drawable/ic_politique"
+                android:text="Politics"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="9sp"/>
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/header_menu_button"
+                android:drawableTop="@drawable/ic_economique"
+                android:text="Economics"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="9sp"/>
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/header_menu_button"
+                android:drawableTop="@drawable/ic_social"
+                android:text="Social"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="9sp"/>
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/header_menu_button"
+                android:drawableTop="@drawable/ic_sport"
+                android:text="Sport"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="9sp"/>
+
+            <Button
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/header_menu_button"
+                android:drawableTop="@drawable/ic_art"
+                android:text="Art"
+                android:paddingTop="6dp"
+                android:textColor="@color/colorPrimary"
+                android:textSize="9sp"/>
+
+
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!--<include
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         layout="@layout/layout_top_menu"
         android:layout_alignParentTop="true"
-        android:id="@+id/header_menu"/>
+        android:id="@+id/header_menu"/>-->
 
 
 
-    <FrameLayout
-        android:id="@+id/fragment_container"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
 
-        <include
+    <!-- Footer Menu -->
+
+        <com.lorentzos.flingswipe.SwipeFlingAdapterView
+            android:id="@+id/votingArea"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rotation_degrees="16"
+            app:max_visible="4"
+            app:min_adapter_stack="6"
+            android:padding="20dp"
+            android:layout_below="@id/header_menu"
+            android:layout_above="@+id/tapBarMenu"
+           />
+
+       <!-- <include
             layout="@layout/layout_bottom_fab"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            /> -->
+        <com.michaldrabik.tapbarmenulib.TapBarMenu
+            android:id="@+id/tapBarMenu"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom"
+            app:tbm_backgroundColor="@color/colorPrimary"
+            app:tbm_menuAnchor="bottom"
+            android:layout_alignParentBottom="true"
+            >
 
-    </FrameLayout>
+            <ImageView
+                android:id="@+id/item1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_add"
+                tools:visibility="visible"
+                />
+
+            <ImageView
+                android:id="@+id/item2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_add"
+                />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                />
+
+            <ImageView
+                android:id="@+id/item3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_add"
+                />
+
+            <ImageView
+                android:id="@+id/item4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:src="@drawable/ic_add"
+                />
+
+        </com.michaldrabik.tapbarmenulib.TapBarMenu>
 </RelativeLayout>
+</FrameLayout>
