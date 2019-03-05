@@ -34,7 +34,8 @@
                 android:text="Culture"
                 android:paddingTop="6dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="9sp"/>
+                android:textSize="9sp"
+                android:id="@+id/goToCulture"/>
 
             <Button
                 android:layout_width="65dp"
@@ -45,7 +46,8 @@
                 android:text="High-tech"
                 android:paddingTop="6dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="9sp"/>
+                android:textSize="9sp"
+                android:id="@+id/goToHighTech"/>
 
             <Button
                 android:layout_width="65dp"
@@ -56,7 +58,8 @@
                 android:text="Politics"
                 android:paddingTop="6dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="9sp"/>
+                android:textSize="9sp"
+                android:id="@+id/goToPolitics"/>
 
             <Button
                 android:layout_width="65dp"
@@ -67,7 +70,8 @@
                 android:text="Economics"
                 android:paddingTop="6dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="9sp"/>
+                android:textSize="9sp"
+                android:id="@+id/goToEconomics"/>
 
             <Button
                 android:layout_width="65dp"
@@ -78,7 +82,8 @@
                 android:text="Social"
                 android:paddingTop="6dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="9sp"/>
+                android:textSize="9sp"
+                android:id="@+id/goToSocial"/>
 
             <Button
                 android:layout_width="65dp"
@@ -89,7 +94,8 @@
                 android:text="Sport"
                 android:paddingTop="6dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="9sp"/>
+                android:textSize="9sp"
+                android:id="@+id/goToSport"/>
 
             <Button
                 android:layout_width="65dp"
@@ -100,7 +106,8 @@
                 android:text="Art"
                 android:paddingTop="6dp"
                 android:textColor="@color/colorPrimary"
-                android:textSize="9sp"/>
+                android:textSize="9sp"
+                android:id="@+id/goToArt"/>
 
 
         </LinearLayout>
@@ -117,7 +124,7 @@
 
 
 
-    <!-- Footer Menu -->
+
 
         <com.lorentzos.flingswipe.SwipeFlingAdapterView
             android:id="@+id/votingArea"
@@ -131,6 +138,8 @@
             android:layout_above="@+id/tapBarMenu"
            />
 
+
+    <!-- Footer Menu -->
        <!-- <include
             layout="@layout/layout_bottom_fab"
             android:layout_width="match_parent"

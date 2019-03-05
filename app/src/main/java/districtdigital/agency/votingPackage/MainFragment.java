@@ -6,6 +6,7 @@ import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
@@ -13,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -31,6 +33,7 @@ public class MainFragment extends Fragment {
     private TapBarMenu tapBarMenu;
     private ArrayList<String> mQuestions;
     private ArrayAdapter<String> questionsAdapter;
+    private Button  bCulture,bHighTech,bPolitics,bEconomics,bSocial,bSport,bArt;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -43,12 +46,44 @@ public class MainFragment extends Fragment {
             }
         });
 
+
+        //View settin'
+        bCulture = view.findViewById(R.id.goToCulture);
+        bHighTech = view.findViewById(R.id.goToHighTech);
+        bPolitics = view.findViewById(R.id.goToPolitics);
+        bEconomics = view.findViewById(R.id.goToEconomics);
+        bSocial = view.findViewById(R.id.goToSocial);
+        bSport = view.findViewById(R.id.goToSport);
+        bArt = view.findViewById(R.id.goToArt);
+
         SwipeFlingAdapterView votingArea = (SwipeFlingAdapterView) view.findViewById(R.id.votingArea);
 
-        grabQuestions();
+        grabQuestions("culture");
+
+        bArt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                grabQuestions("art");
+            }
+        });
 
 
-        questionsAdapter = new ArrayAdapter<String>(getActivity(), R.layout.item,R.id.helloText, mQuestions );
+        bCulture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                grabQuestions("culture");
+            }
+        });
+
+
+
+
+
+
+
+
+
+        //Question Arrays
         votingArea.setAdapter(questionsAdapter);
         votingArea.setFlingListener(new SwipeFlingAdapterView.onFlingListener() {
             @Override
@@ -101,22 +136,63 @@ public class MainFragment extends Fragment {
 
 
 
-    private void grabQuestions() {
+    private void grabQuestions(String field) {
 
-        mQuestions = new ArrayList<String>();
-        mQuestions.add("question 1");
-        mQuestions.add("question 2");
-        mQuestions.add("question 3");
-        mQuestions.add("question 4");
+        mQuestions.clear();
+        switch (field)
+        {
+            case "culture":
+                mQuestions = new ArrayList<String>();
+                mQuestions.add("culture 1");
+                mQuestions.add("culture 2");
+                mQuestions.add("culture 3");
+                mQuestions.add("culture 4");
+                break;
+
+            case "art":
+                mQuestions = new ArrayList<String>();
+                mQuestions.add("art 1");
+                mQuestions.add("art 2");
+                mQuestions.add("art 3");
+                mQuestions.add("art 4");
+                break;
+
+                default:
+                    mQuestions = new ArrayList<String>();
+                    mQuestions.add("default 1");
+                    mQuestions.add("default 2");
+                    mQuestions.add("default 3");
+                    mQuestions.add("default 4");
+
+        questionsAdapter = new ArrayAdapter<String>(getActivity(), R.layout.item,R.id.helloText, mQuestions );
+
+        }
 
 
     }
+
+
+
+    private void setViewByMenuButton(Button bLocal, String sLocal)
+    {
+
+    }
+
+
 
     private void makeToast(FragmentActivity activity, String s) {
         Toast.makeText(activity, s, Toast.LENGTH_SHORT).show();
     }
 
 
+
+    private void goToFragment(Fragment fragment, boolean addToBackStack) {
+        FragmentTransaction transaction = getActivity().getSupportFragmentManager().beginTransaction();
+        if (addToBackStack) {
+            transaction.addToBackStack(null);
+        }
+        transaction.replace(R.id.votingArea, fragment).commit();
+    }
 
 
 }
