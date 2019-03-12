@@ -138,7 +138,7 @@ public class MainFragment extends Fragment {
 
     private void grabQuestions(String field) {
 
-        mQuestions.clear();
+//        mQuestions.clear();
         switch (field)
         {
             case "culture":
