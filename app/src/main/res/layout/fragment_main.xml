@@ -113,39 +113,23 @@
         </LinearLayout>
     </HorizontalScrollView>
 
-    <!--<include
+
+
+
+    <districtdigital.agency.utilities.customViewPager
+        android:layout_below="@id/header_menu"
+        android:layout_above="@+id/tapBarMenu"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/layout_top_menu"
-        android:layout_alignParentTop="true"
-        android:id="@+id/header_menu"/>-->
+        android:layout_height="match_parent"
+        android:id="@+id/votingViewPager"
+        >
+
+    </districtdigital.agency.utilities.customViewPager>
 
 
 
 
-
-
-
-        <com.lorentzos.flingswipe.SwipeFlingAdapterView
-            android:id="@+id/votingArea"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:rotation_degrees="16"
-            app:max_visible="4"
-            app:min_adapter_stack="6"
-            android:padding="20dp"
-            android:layout_below="@id/header_menu"
-            android:layout_above="@+id/tapBarMenu"
-           />
-
-
-    <!-- Footer Menu -->
-       <!-- <include
-            layout="@layout/layout_bottom_fab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            /> -->
-        <com.michaldrabik.tapbarmenulib.TapBarMenu
+    <com.michaldrabik.tapbarmenulib.TapBarMenu
             android:id="@+id/tapBarMenu"
             android:layout_width="match_parent"
             android:layout_height="60dp"

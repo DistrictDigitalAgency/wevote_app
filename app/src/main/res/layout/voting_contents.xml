@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="NamespaceTypo">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/questionContent"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. "
+        android:layout_margin="20dp"
+        android:textSize="18sp"
+        android:textColor="@color/blackColor"
+        android:textAlignment="center"
+        />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textAlignment="center"
+        android:layout_gravity="center">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Powered by"
+        android:layout_marginRight="5dp"
+        />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="District Digital Agency"
+            android:id="@+id/poweredBy"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        >
+        <com.dd.morphingbutton.impl.LinearProgressButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="this is a testing answer 1"
+            android:background="@drawable/answers_button"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:id="@+id/answer1"
+            android:visibility="visible"
+
+            />
+
+        <com.dd.morphingbutton.impl.LinearProgressButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="this is a testing answer 2"
+            android:background="@drawable/answers_button"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:id="@+id/answer2"
+            android:layout_above="@+id/answer1"
+            android:visibility="visible"
+            />
+        <com.dd.morphingbutton.impl.LinearProgressButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="this is a testing answer 3"
+            android:background="@drawable/answers_button"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:id="@+id/answer3"
+            android:layout_above="@+id/answer2"
+            android:visibility="visible"
+
+            />
+        <com.dd.morphingbutton.impl.LinearProgressButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="this is a testing answer 4"
+            android:background="@drawable/answers_button"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:textStyle="bold"
+            android:id="@+id/answer4"
+            android:layout_above="@+id/answer3"
+            android:visibility="visible"
+            android:onClick="answer4BtnIsCicked"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
