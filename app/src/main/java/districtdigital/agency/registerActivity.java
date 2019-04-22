@@ -6,6 +6,7 @@ import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -41,7 +42,7 @@ public class registerActivity extends AppCompatActivity {
         //Toolbar Initialiser
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         txt = (TextView) findViewById(R.id.ToolbarTXT);
-        txt.setText("S'inscrire");
+        txt.setText("Sign up");
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
@@ -152,6 +153,14 @@ public class registerActivity extends AppCompatActivity {
 
         //Data will be stored f year w month w dayof...
 
+    }
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.top_menu, menu);
+        return true;
     }
 
 

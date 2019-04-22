@@ -121,8 +121,11 @@
         android:layout_above="@+id/tapBarMenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/votingViewPager"
+        android:id="@+id/votingArea"
         >
+
+
+
 
     </districtdigital.agency.utilities.customViewPager>
 
@@ -136,8 +139,9 @@
             android:layout_gravity="bottom"
             app:tbm_backgroundColor="@color/colorPrimary"
             app:tbm_menuAnchor="bottom"
-            android:layout_alignParentBottom="true"
-            >
+        android:layout_alignParentBottom="true"
+
+        >
 
             <ImageView
                 android:id="@+id/item1"
@@ -187,5 +191,7 @@
                 />
 
         </com.michaldrabik.tapbarmenulib.TapBarMenu>
+
+
 </RelativeLayout>
 </FrameLayout>

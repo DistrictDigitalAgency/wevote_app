@@ -1,10 +1,13 @@
 package districtdigital.agency.votingPackage;
 
+import android.widget.Button;
+
 public class viewPagerModel {
     public String questionContent;
     public String poweredBy;
     public String answer1,answer2,answer3,answer4;
     public int coinAllowed;
+
 
     public viewPagerModel(String questionContent, String poweredBy, String answer1, String answer2, String answer3, String answer4, int coinAllowed) {
         this.questionContent = questionContent;

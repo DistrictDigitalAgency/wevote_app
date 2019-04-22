@@ -4,6 +4,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,11 +30,18 @@ public class mainVotingActivity extends AppCompatActivity implements DuoMenuView
     private Toolbar mToolbar;
     private TextView weCoinAmount;
 
+
+    Fragment mainFragment;
+
     private ArrayList<String> mTitles = new ArrayList<>();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_voting);
+
+
+
+
         mTitles = new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.menuOptions)));
 
         mDuoDrawerLayout = (DuoDrawerLayout) findViewById(R.id.drawer);
@@ -131,5 +139,6 @@ public class mainVotingActivity extends AppCompatActivity implements DuoMenuView
         // Close the drawer
         mDuoDrawerLayout.closeDrawer();
     }
+
 
 }

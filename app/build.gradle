@@ -37,4 +37,9 @@ dependencies {
     implementation 'com.github.dmytrodanylyk:android-morphing-button:98a4986e56'
 
 
+    implementation 'com.github.SubhrajyotiSen:library:1.1.2'
+
+
+
+
 }
