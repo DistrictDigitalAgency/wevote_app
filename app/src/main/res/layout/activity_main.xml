@@ -28,7 +28,13 @@
        >
 
 
-        <android.support.design.widget.TextInputLayout
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/wevoblacklogo"
+            android:layout_centerHorizontal="true"/>
+
+           <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_above="@+id/password"
@@ -37,7 +43,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="Mail address"
-                android:id="@+id/mailAdress"
+                android:id="@+id/mailAdressField"
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="50dp"
                 android:layout_marginRight="50dp"
